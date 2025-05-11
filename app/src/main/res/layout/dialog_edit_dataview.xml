@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/idEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Номер дела"
+        android:inputType="number">
+
+    </EditText>
+    <EditText
+        android:id="@+id/numberEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Населённый пункт">
+
+    </EditText>
+    <EditText
+        android:id="@+id/descriptionEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Описание">
+
+    </EditText>
+    <EditText
+        android:id="@+id/suspectsEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Подозреваемые">
+
+    </EditText>
+
+</LinearLayout>

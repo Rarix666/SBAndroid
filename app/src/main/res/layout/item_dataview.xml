@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Номер дела"
+        android:textSize="18sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Населённый пункт"
+        android:textSize="18sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Описание"
+        android:textSize="18sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/Suspects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Подозреваемы"
+        android:textSize="18sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/buttonEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="Редактировать"
+        android:src="@android:drawable/ic_menu_edit">
+
+    </ImageButton>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Поиск граждан"
+                android:textSize="32dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <EditText
+                android:id="@+id/FIO_EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="ФИО"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/textView6"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <EditText
+                android:id="@+id/Pasport_EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Паспорт"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/FIO_EditText"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <EditText
+                android:id="@+id/Jitel_EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Место жительства"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/Pasport_EditText"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                />
+
+            <EditText
+                android:id="@+id/Kod_EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Номер медкарты"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/Jitel_EditText"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <Button
+                android:id="@+id/Poisk_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Найти"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/Kod_EditText"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Recycle_Civil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/Poisk_Button"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
