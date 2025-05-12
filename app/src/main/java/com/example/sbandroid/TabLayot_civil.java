@@ -50,7 +50,7 @@ public class TabLayot_civil extends Fragment {
         String filterPlace = Place_EditText.getText().toString();
         String filterMed = MedKarta_EditText.getText().toString();
         argument.clear();
-        if (filterFIO.length() != 0) {
+        if (filterFIO.length() != 0 || filterPasport.length() != 0 || filterPlace.length() != 0 || filterMed.length() != 0) {
             argument.put("fio", filterFIO);
             argument.put("pasport", filterPasport);
             argument.put("place", filterPlace);

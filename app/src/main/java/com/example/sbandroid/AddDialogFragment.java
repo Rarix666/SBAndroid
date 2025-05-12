@@ -47,7 +47,7 @@ public class AddDialogFragment extends DialogFragment {
         }
         else {
             Toast toast = Toast.makeText(getActivity(),
-                    "Поле населённого пункта не должно быть пустым!",
+                    "Все поля должны быть заполнены!",
                     Toast.LENGTH_LONG);
             toast.show();
         }

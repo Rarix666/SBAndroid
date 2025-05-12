@@ -1,9 +1,11 @@
 package com.example.sbandroid;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import static com.example.sbandroid.Supabase.getData;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -16,9 +18,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.HashMap;
+import java.util.Map;
 
+public class MainActivity extends AppCompatActivity {
+    public static Map<String, Object> arg = new HashMap<>();
     EditText Login, Password;
+    User user;
+
     public static RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
         Login = findViewById(R.id.editTextText);
         Password = findViewById(R.id.editTextTextPassword);
-
     }
 
     public void Perehod(View view){ //Слушатель для кнопки авторизации
-        Supabase.Autorization(Login.getText().toString(), Password.getText().toString(), this);
+
+        arg.put("AName", Login.getText().toString());
+        arg.put("APassword", Password.getText().toString());
+        Log.e(TAG, "" + Login + "" + Password);
+        Supabase.Autorization( this, arg);
     }
 
 }
