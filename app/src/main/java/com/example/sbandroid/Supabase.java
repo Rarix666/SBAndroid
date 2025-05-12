@@ -1,5 +1,6 @@
 package com.example.sbandroid;
 
+import static android.app.PendingIntent.getActivity;
 import static android.content.ContentValues.TAG;
 import static androidx.core.content.ContextCompat.startActivity;
 
@@ -23,27 +24,25 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Supabase {
-    public static void Autorization(String editTextText, String editTextTextPassword, Context context){ // метод авторизации, предназначенный для обработки получаемых данных
+    public static void Autorization(Context context, Map<String, Object> arg){ // метод авторизации, предназначенный для обработки получаемых данных
         SupabaseService service = SupabaseClient.getInstance();
-        service.autoPost().enqueue(new Callback<List<Map<String, Object>>>() { //Используется для активации SupabaseService, метода autoPost
+        service.autoPost(arg).enqueue(new Callback<List<Map<String, Object>>>() { //Используется для активации SupabaseService, метода autoPost
             @Override
             public void onResponse(Call<List<Map<String, Object>>> call, Response<List<Map<String, Object>>> response) {
                 if(response.isSuccessful()){
                     Log.e(TAG, "" + response.body());
-                    for(Map<String, Object> item: response.body()){
-                        int id = ((Double) item.get("id")).intValue();
-                        String Name = (String) item.get("Name");
-                        String Pass = (String) item.get("Password");
-                        Log.e(TAG, "" + Name + " " + Pass);
-                        Log.e(TAG, "" + editTextText + " " + editTextTextPassword);
-                        if(Objects.equals(Name, editTextText) && Objects.equals(Pass, editTextTextPassword)){
+                        Log.e(TAG, "" + arg);
+                        if(response.body().size() != 0)
+                        {
                             Intent intent = new Intent(context, Perehodic.class);
                             startActivity(context, intent, null);
                         }
-                        else {
-
+                        else
+                        {
+                            Toast toast = Toast.makeText(context, "Данные введены неверно", Toast.LENGTH_LONG);
+                            toast.show();
                         }
-                    }
+
                 }
                 else {
                     Log.e(TAG, "" + response.raw());

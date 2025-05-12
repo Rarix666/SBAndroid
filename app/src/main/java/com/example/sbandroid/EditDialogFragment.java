@@ -59,7 +59,7 @@ public class EditDialogFragment  extends DialogFragment {
         String number = NumberText.getText().toString();
         String description = DescriptionText.getText().toString();
         String suspects = SuspectsText.getText().toString();
-        if (!idText.getText().toString().isEmpty()) {
+        if (!idText.getText().toString().isEmpty() && !NumberText.getText().toString().isEmpty() && !DescriptionText.getText().toString().isEmpty() && !SuspectsText.getText().toString().isEmpty()) {
             Map<String, Object> updateData = new HashMap<>();
             updateData.put("IncID",  data.getId());
             updateData.put("IncNumber", number);
@@ -68,7 +68,7 @@ public class EditDialogFragment  extends DialogFragment {
             Supabase.updateInc(updateData, getParentFragmentManager(), TabLayout_inc.argument);
         }
         else{
-            Toast toast = Toast.makeText(getActivity(), "Заполните поле Id!", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(getActivity(), "Заполните вес поля!", Toast.LENGTH_LONG);
             toast.show();
         }
     }

@@ -21,7 +21,7 @@ public interface SupabaseService {
             "Content-Type: application/json"
     })
     @POST("rpc/Autorization") //Наименование хранимой процедуры, rpc/ - указывает на то что, это хранимка
-    Call<List<Map<String, Object>>> autoPost(); //Наименование фактического метода исполнителя, прописываемый в классе Supabase
+    Call<List<Map<String, Object>>> autoPost(@Body Map<String, Object> arg); //Наименование фактического метода исполнителя, прописываемый в классе Supabase
 
     @Headers({
             "apikey: " + BASE_API,
