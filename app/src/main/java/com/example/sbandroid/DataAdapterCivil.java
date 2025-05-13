@@ -46,11 +46,11 @@ public class DataAdapterCivil extends RecyclerView.Adapter<DataAdapterCivil.Data
 
         public DataViewHolder(@NonNull View itemView) {
             super(itemView);
-            idTextView = itemView.findViewById(R.id.Id);         // Change to correct IDs
-            fioTextView = itemView.findViewById(R.id.FIO);       // Change to correct IDs
-            pasportTextView = itemView.findViewById(R.id.Pasport); // Change to correct IDs
-            placeTextView = itemView.findViewById(R.id.Place);   // Change to correct IDs
-            medkartaTextView = itemView.findViewById(R.id.Medkarta);// Change to correct IDs
+            idTextView = itemView.findViewById(R.id.Id);
+            fioTextView = itemView.findViewById(R.id.FIO);
+            pasportTextView = itemView.findViewById(R.id.Pasport);
+            placeTextView = itemView.findViewById(R.id.Place);
+            medkartaTextView = itemView.findViewById(R.id.Medkarta);
         }
     }
 }

@@ -21,7 +21,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity { //Класс авторизации
     public static Map<String, Object> arg = new HashMap<>();
     EditText Login, Password;
     User user;

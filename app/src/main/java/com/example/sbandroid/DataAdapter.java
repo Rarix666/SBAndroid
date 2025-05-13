@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder> {
+public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder> { // Адаптер для класса Data
     private List<Data> dataList;
     private FragmentManager manager;
     public DataAdapter(List<Data> dataList, FragmentManager manager){
@@ -53,7 +53,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
         }
     }
 
-    private void showEditDialog(Data data) {
+    private void showEditDialog(Data data) { // Вывод диалогового окна
         EditDialogFragment editDialogFragment = new EditDialogFragment();
         Bundle bundle = new Bundle();
         bundle.putParcelable("Data", data);

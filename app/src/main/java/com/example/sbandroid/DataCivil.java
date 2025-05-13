@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
-public class DataCivil implements Parcelable {
+public class DataCivil implements Parcelable { // Данные для вывода в список
     int id;
     String fio;
     int pasport;

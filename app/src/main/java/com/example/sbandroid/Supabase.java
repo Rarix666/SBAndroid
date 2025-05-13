@@ -146,7 +146,7 @@ public class Supabase {
         });
     }
 
-    public static void SearchCivil(RecyclerView recyclerView, Map<String, Object> params){
+    public static void SearchCivil(RecyclerView recyclerView, Map<String, Object> params){ // Метод для поиска граждан
         SupabaseService service = SupabaseClient.getInstance();
         List<DataCivil> dataCivilList = new ArrayList<>();
         service.searchCivil(params).enqueue(new Callback<List<Map<String, Object>>>() {
@@ -177,7 +177,7 @@ public class Supabase {
         });
     }
 
-    public static void deleteInc(Map<String, Object> arg, FragmentManager manager, Map<String, Object> argument){
+    public static void deleteInc(Map<String, Object> arg, FragmentManager manager, Map<String, Object> argument){ // Метод удаления данных
         SupabaseService service = SupabaseClient.getInstance();
         service.deleteInc(arg).enqueue(new Callback<List<Map<String, Object>>>() {
             @Override
@@ -200,7 +200,7 @@ public class Supabase {
         });
     }
 
-    public static void updateInc(Map<String, Object> params, FragmentManager manager, Map<String, Object> argument){
+    public static void updateInc(Map<String, Object> params, FragmentManager manager, Map<String, Object> argument){ // Метод обновления данных
         SupabaseService service = SupabaseClient.getInstance();
         service.updateInc(params).enqueue(new Callback<List<Map<String, Object>>>() {
             @Override
@@ -223,7 +223,7 @@ public class Supabase {
         });
     }
 
-    public static void addInc(Map<String, Object> params, FragmentManager manager){
+    public static void addInc(Map<String, Object> params, FragmentManager manager){ // Метод добавления данных
         SupabaseService service = SupabaseClient.getInstance();
         service.addInc(params).enqueue(new Callback<List<Map<String, Object>>>() {
             @Override

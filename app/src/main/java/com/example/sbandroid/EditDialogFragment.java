@@ -17,7 +17,7 @@ import java.util.Map;
 public class EditDialogFragment  extends DialogFragment {
     EditText idText, NumberText, DescriptionText, SuspectsText;
     @NonNull
-    public Dialog onCreateDialog(Bundle savedInstanceState){
+    public Dialog onCreateDialog(Bundle savedInstanceState){ // Метод для добавления диалогового окна редактирования
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Редактировать запись");
 
@@ -41,7 +41,7 @@ public class EditDialogFragment  extends DialogFragment {
 
         return builder.create();
     }
-    public void deleteData(Data data){
+    public void deleteData(Data data){ // Метод для подтверждения удаления
         FragmentManager manager = getParentFragmentManager();
         AlertDialog.Builder confirmDialog = new AlertDialog.Builder(getActivity());
         confirmDialog.setTitle("Подтверждение");
@@ -55,7 +55,7 @@ public class EditDialogFragment  extends DialogFragment {
         confirmDialog.create().show();
     }
 
-    public void updateData(Data data){
+    public void updateData(Data data){ // Метод для обновления данных по кнопочному элементу
         String number = NumberText.getText().toString();
         String description = DescriptionText.getText().toString();
         String suspects = SuspectsText.getText().toString();

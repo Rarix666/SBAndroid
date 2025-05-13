@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
-public class Data implements Parcelable {
+public class Data implements Parcelable { // Класс хранящий в себе данные, необходимые для добавления/обновления/редактирования/вывода и т.д
     int id;
     String number;
     String description;

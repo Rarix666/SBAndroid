@@ -18,7 +18,7 @@ import java.util.Map;
 public class AddDialogFragment extends DialogFragment {
     EditText CreateNumberText, CreateDescriptionText, CreateSuspectsText;
     @NonNull
-    public Dialog onCreateDialog(Bundle savedInstanceState){
+    public Dialog onCreateDialog(Bundle savedInstanceState){ //Метод создания диалогового окна для функции добавления
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Добавить новое происшествие");
 
@@ -34,7 +34,7 @@ public class AddDialogFragment extends DialogFragment {
 
         return builder.create();
     }
-    public void addClick(){
+    public void addClick(){ //Метод отвечающий за добавление данных в БД
         String createNumber = CreateNumberText.getText().toString();
         String createDescription = CreateDescriptionText.getText().toString();
         String createSuspects = CreateSuspectsText.getText().toString();
