@@ -11,13 +11,16 @@
       <SelectionState runConfigName="tc_001_testSearchInc()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="tc_002_testSearchCivil()">
+      <SelectionState runConfigName="tc_006_testUpdateDescriptionFalse()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="tc_003_testUpdateIncidentTrue()">
+      <SelectionState runConfigName="tc_005_testUpdateDescriptionTrue()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="ExampleInstrumentedTest">
+      <SelectionState runConfigName="tc_007_testUpdateSuspectsTrue()">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="tc_012_testIncidentAddNull()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
